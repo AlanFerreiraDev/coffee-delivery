@@ -1,5 +1,4 @@
 import { ShoppingCart } from 'phosphor-react'
-import americanExpress from '../../../../assets/coffee-card/american-express.svg'
 import { QuantityInput, RegularText, TitleText } from '../../../../components'
 import { formatMoney } from '../../../../utils/formatMoney'
 import { CoffeeProps } from './interfaces'
