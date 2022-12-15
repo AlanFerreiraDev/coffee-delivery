@@ -9,6 +9,7 @@ export const HeaderButton = ({ variant, children }: HeaderButtonProps) => {
         <>
           <MapPin size={20} weight="fill" />
           {children}
+          {console.log('teste')}
         </>
       )}
 
