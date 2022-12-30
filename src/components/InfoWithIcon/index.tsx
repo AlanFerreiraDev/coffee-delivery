@@ -1,16 +1,16 @@
-import { InfoWithIconProps } from './interfaces'
-import { IconContainer, InfoWithIconContainer } from './styles'
+import { InfoWithIconContainer, IconContainer } from './styles'
+import { ReactNode } from 'react'
 
-export const InfoWithIcon = ({
-  icon,
-  text,
-  iconBgColor,
-}: InfoWithIconProps) => {
+interface BenefitItemProps {
+  icon: ReactNode
+  text: string | ReactNode
+  iconBg: string
+}
+
+export function InfoWithIcon({ icon, text, iconBg }: BenefitItemProps) {
   return (
     <InfoWithIconContainer>
-      <IconContainer iconBgColor={iconBgColor}>
-        <img src={icon.src} alt={icon.alt} />
-      </IconContainer>
+      <IconContainer iconBg={iconBg}>{icon}</IconContainer>
       {typeof text === 'string' ? <p>{text}</p> : text}
     </InfoWithIconContainer>
   )

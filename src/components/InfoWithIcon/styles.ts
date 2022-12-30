@@ -6,23 +6,17 @@ export const InfoWithIconContainer = styled.div`
   gap: 0.75rem;
 `
 
-interface IconContainerProps {
-  iconBgColor: string
+interface IconsContainerProps {
+  iconBg: string
 }
 
-export const IconContainer = styled.div<IconContainerProps>`
+export const IconContainer = styled.div<IconsContainerProps>`
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-
-  background-color: ${({ iconBgColor }) => iconBgColor};
+  background: ${({ iconBg }) => iconBg};
   color: ${({ theme }) => theme.colors['base-white']};
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  > svg {
-    -webkit-font-smoothing: antialiased;
-  }
 `

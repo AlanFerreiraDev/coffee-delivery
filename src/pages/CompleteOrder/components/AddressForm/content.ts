@@ -3,6 +3,7 @@ interface AddressFormDataProps {
   placeholder: string
   type?: string
   className?: string
+  rightText?: string
 }
 
 export const AddressFormData: AddressFormDataProps[] = [
@@ -26,6 +27,7 @@ export const AddressFormData: AddressFormDataProps[] = [
     id: 'complement',
     placeholder: 'Complemento',
     className: 'complement',
+    rightText: 'Opcional',
   },
   {
     id: 'neighborhood',

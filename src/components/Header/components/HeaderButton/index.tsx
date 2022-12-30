@@ -9,11 +9,15 @@ export const HeaderButton = ({ variant, children }: HeaderButtonProps) => {
         <>
           <MapPin size={20} weight="fill" />
           {children}
-          {console.log('teste')}
         </>
       )}
 
-      {variant !== 'purple' && <ShoppingCart size={20} weight="fill" />}
+      {variant !== 'purple' && (
+        <>
+          {children}
+          <ShoppingCart size={20} weight="fill" />
+        </>
+      )}
     </StyledHeaderButton>
   )
 }
